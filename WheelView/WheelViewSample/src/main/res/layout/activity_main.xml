@@ -1,0 +1,31 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="500dp"
+    android:layout_height="1800dp">
+
+    <com.lukedeighton.wheelview.WheelView
+        android:id="@+id/wheelview"
+        android:layout_width="500dp"
+        android:layout_height="800dp"
+        app:emptyItemColor="@color/green_900"
+        app:repeatItems="true"
+        app:rotatableWheelDrawable="false"
+        app:selectionAngle="90.0"
+        app:selectionColor="@color/teal_900"
+        app:selectionPadding="4dp"
+        app:wheelColor="@color/purple_50"
+        app:wheelItemCount="14"
+        app:wheelItemRadius="41dp"
+        app:wheelPadding="13dp"
+        app:wheelRadius="276dp"
+        android:layout_marginLeft="-46dp"
+        android:layout_marginTop="300dp"/>
+
+    <!--
+            app:wheelPosition="bottom"
+                    app:wheelOffsetY="60dp"
+
+        app:wheelItemTransformer="com.lukedeighton.wheelview.transformer.SimpleItemTransformer"
+
+    -->
+</RelativeLayout>
