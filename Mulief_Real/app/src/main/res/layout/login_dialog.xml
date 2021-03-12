@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/border_transparency"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/id_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingTop="32dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="32dp">
+
+
+        <EditText
+            android:id="@+id/et_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="아이디를 입력하세요."
+            android:paddingLeft="8dp"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="비밀번호를 입력하세요."
+            android:paddingLeft="8dp"
+            android:textColor="@color/black" />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/back_btn2"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:background="@drawable/border_transparency"
+                android:text="뒤로가기" />
+            <Button
+                android:id="@+id/ok_login"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:background="@drawable/border_transparency"
+                android:text="로그인" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
