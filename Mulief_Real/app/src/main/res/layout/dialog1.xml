@@ -17,25 +17,25 @@
 
         <Button
             android:id="@+id/google_btn"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            android:background="@mipmap/google3"
+            android:background="@drawable/google3"
             android:textColor="@color/black" />
 
         <Button
             android:id="@+id/facebook_btn"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            android:background="@mipmap/facebook3" />
+            android:background="@drawable/facebook3" />
 
         <Button
             android:id="@+id/naver_btn"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
-            android:background="@mipmap/naver3"
+            android:background="@drawable/naver3"
             android:textColor="@color/black" />
 
 

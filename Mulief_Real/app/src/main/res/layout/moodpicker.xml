@@ -4,27 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="500dp"
     android:layout_height="1800dp"
-    android:background="@color/white"
     tools:context=".MoodPicker">
 
-    <TextView
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="200dp"
-        android:text="Express your mood"
-        android:textSize="32sp"/>
+        android:background="@drawable/background_img"/>
 
-    <com.lukedeighton.wheelview.WheelView
-        android:id="@+id/wheel_view"
-        android:layout_width="500dp"
-        android:layout_height="900dp"
-        android:layout_marginLeft="-48dp"
-        android:layout_marginTop="380dp"
-        app:repeatItems="true"
-        app:selectionAngle="88.0"
-        app:wheelColor="#00CCCCCC"
-        app:wheelItemRadius="50dp"
-        app:wheelRadius="360dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="200dp"
+            android:text="Express your mood"
+            android:textSize="32sp" />
+
+        <com.lukedeighton.wheelview.WheelView
+            android:id="@+id/wheel_view"
+            android:layout_width="500dp"
+            android:layout_height="900dp"
+            android:layout_marginLeft="-48dp"
+            android:layout_marginTop="420dp"
+            app:repeatItems="true"
+            app:selectionAngle="88.0"
+            app:wheelColor="#00CCCCCC"
+            app:wheelItemRadius="50dp"
+            app:wheelRadius="360dp" />
 
 </RelativeLayout>
