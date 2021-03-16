@@ -44,16 +44,29 @@ import java.util.ArrayList;
 import java.util.List;
 
 //TODO onWheelItemSelected callback for when the wheel has settled (0 angular velocity), and one when it is passed
+// onWheelItemSelected는 휠이 안정되었을 때 (각속도 0), 통과 할 때 하나
 //TODO empty - physics to spring away - prevent movement out from edge
+// 비어 있음-물리학이 튀어 나옴-가장자리에서 움직임 방지
 //TODO sticky selection - always settle on a state that completely selects an item
+// 고정 선택-항상 항목을 완전히 선택하는 상태로 설정
 //TODO circular clip option?
+// 원형 클립 옵션?
 //TODO Saving State during screen rotate etc. SavedState extends BaseSavedState
+// 화면 회전 중 상태 저장 등. SavedState는 BaseSavedState를 확장합니다.
 //TODO can items be rendered as views or use recyclerView - use viewgroup?
-//TODO onWheelItemVisibilityChange needs to factor in when items are cycled within view bounds and should that have another callback?
-//TODO option to get wheel state (either flinging or dragging)
-//TODO item radius works separately ? uses min angle etc. to figure out in the layout event
-//TODO setWheelVelocity method
+//  항목을 뷰로 렌더링하거나 recyclerView를 사용할 수 있습니다.-viewgroup을 사용합니까?
 //TODO util method to animate to a wheel position?
+//  휠 위치로 애니메이션하는 유틸리티 방법?
+//TODO onWheelItemVisibilityChange needs to factor in when items are cycled within view bounds and should that have another callback?
+// onWheelItemVisibilityChange는 항목이 뷰 범위 내에서 순환되는시기를 고려해야하며 다른 콜백이 있어야합니까?
+//TODO option to get wheel state (either flinging or dragging)
+// 휠 상태를 가져 오는 TODO 옵션 (플링 또는 드래그)
+//TODO item radius works separately ? uses min angle etc. to figure out in the layout event
+// 항목 반경은 별도로 작동합니까? 최소 각도 등을 사용하여 레이아웃 이벤트를 파악합니다.
+//TODO setWheelVelocity method
+// TODO setWheelVelocity 메서드
+//TODO util method to animate to a wheel position?
+// 휠 위치로 애니메이션하는 유틸리티 방법?
 
 public class WheelView extends View {
 
@@ -74,6 +87,9 @@ public class WheelView extends View {
     //The touch factors decrease the drag movement towards the center of the wheel. It is there so
     //that dragging the wheel near the center doesn't cause the wheel's angle to change
     //drastically. It is squared to provide a linear function once multiplied by 1/r^2
+    // 터치 팩터는 휠 중심으로 드래그 이동을 감소시킵니다. 그래서 거기
+    // 중심 근처에서 휠을 드래그해도 휠의 각도가 변경되지 않습니다.
+    // 극적으로. 1 / r ^ 2를 곱하면 선형 함수를 제공하기 위해 제곱됩니다.
     private static final int TOUCH_FACTOR_SIZE = 20;
     private static final float TOUCH_DRAG_COEFFICIENT = 0.8f;
 

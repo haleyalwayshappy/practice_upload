@@ -5,6 +5,7 @@ import android.graphics.drawable.Drawable;
 import android.graphics.drawable.ShapeDrawable;
 import android.graphics.drawable.shapes.OvalShape;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -29,6 +30,7 @@ public class MoodPicker extends AppCompatActivity {
     };
     int size = 16;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,21 +41,26 @@ public class MoodPicker extends AppCompatActivity {
 
         /**이미지들 넣는 코드 */
         Drawable[] drawables = new Drawable[size];
-        for(int i = 0; i<size; i++){
+        for (int i = 0; i < size; i++) {
             drawables[i] = getDrawable(images[i]);
         }
 
         wheelView.setAdapter(new WheelAdapter() {
+
             @Override
             public Drawable getDrawable(int position) {
-                return drawables[position];
+
+                Drawable drawable = drawables[position];
+                return drawable;
             }
-        @Override
-        public int getCount() {
-            return size;
+
+            @Override
+            public int getCount() {
+
+                return size;
 
             }
-    });
+        });
 //        /**컬러 넣는 코드 [no  image]*/
 //         ShapeDrawable[] shapeDrawables = new ShapeDrawable[size];
 //         for (int i = 0; i < size; i++) {
@@ -73,23 +80,27 @@ public class MoodPicker extends AppCompatActivity {
 //            }
 //        });
 
-        wheelView.setOnWheelItemClickListener(new WheelView.OnWheelItemClickListener(){
-        @Override
-        public void onWheelItemClick (WheelView parent, int position, boolean isSelected){
-            /**[수정] 터치 되었을 때 다음 페이지로 넘어가기 */
+        wheelView.setOnWheelItemClickListener(new WheelView.OnWheelItemClickListener() {
+            @Override
+            public void onWheelItemClick(WheelView parent, int position, boolean isSelected) {
 
-           switch (position){
-            case 2:
-            Toast.makeText(com.hong.mulief_real.MoodPicker.this, "흥분페이지로 이동", Toast.LENGTH_SHORT).show();
-            // 흥분으로 이동할 페이지 코드 달기
-            break;
-            case 12:
-            Toast.makeText(com.hong.mulief_real.MoodPicker.this, "우울페이지로 이동", Toast.LENGTH_SHORT).show();
-            // 우울로 이동할 페이지 코드 달기
-            break;
-           }
+                Vibrator vib = (Vibrator) getSystemService(VIBRATOR_SERVICE);
+                vib.vibrate(15);
 
-        }
+                /**[수정] 터치 되었을 때 다음 페이지로 넘어가기 */
+
+                switch (position) {
+                    case 2:
+                        Toast.makeText(com.hong.mulief_real.MoodPicker.this, "흥분페이지로 이동", Toast.LENGTH_SHORT).show();
+                        // 흥분으로 이동할 페이지 코드 달기
+                        break;
+                    case 12:
+                        Toast.makeText(com.hong.mulief_real.MoodPicker.this, "우울페이지로 이동", Toast.LENGTH_SHORT).show();
+                        // 우울로 이동할 페이지 코드 달기
+                        break;
+                }
+
+            }
         });
     }
 

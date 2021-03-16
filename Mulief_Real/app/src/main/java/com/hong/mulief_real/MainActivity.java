@@ -138,7 +138,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mediaController = new MediaController(this);
         mediaController.setAnchorView(videoView);
         //비디오 경로 설정
-        Uri uri = Uri.parse("android.resource://" + getPackageName() + "/raw/test");
+        Uri uri = Uri.parse("android.resource://" + getPackageName() + "/raw/comp");
         videoView.setVideoURI(uri);
 
         videoView.start();
