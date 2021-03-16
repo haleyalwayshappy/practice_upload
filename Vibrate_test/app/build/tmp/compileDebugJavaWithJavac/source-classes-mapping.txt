@@ -1,0 +1,4 @@
+com/hong/vibrate_test/BuildConfig.java
+ com.hong.vibrate_test.BuildConfig
+com/hong/vibrate_test/MainActivity.java
+ com.hong.vibrate_test.MainActivity
